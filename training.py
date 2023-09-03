@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
+import os
 import matplotlib.pyplot as plt
+import statsmodels.api as sm
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
 from sklearn import svm
@@ -27,11 +29,13 @@ from statistics import mean
 from collections import Counter
 from sklearn.datasets import make_classification
 from imblearn.over_sampling import RandomOverSampler
-import statsmodels.api as sm
 from sklearn.metrics import accuracy_score
 
+#Kaggle Competition
+#URL: https://www.kaggle.com/competitions/store-sales-time-series-forecasting/data
 
-data_path = "~/Documentos/github/kaggle_store_sales/"
-train = data_path + 'holidays_events.csv'               
+working_path = os.chdir("~/Documentos/github/kaggle_store_sales/")
+data_filename = 'holidays_events.csv'
 
-dataset = pd.read_csv(train)
+
+dataset = pd.read_csv(working_path + data_filename)
