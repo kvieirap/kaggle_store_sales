@@ -1,2 +1,2 @@
 # kaggle_store_sales
-kaggle training in machine learning
+kaggle training machine learning for Store Sales - Time Series Forecasting
